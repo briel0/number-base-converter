@@ -108,9 +108,7 @@ def definitive_function():
     elif (tipo_saida == "Hexadecimal"):
         result = to_hexa()
 
-    app.message_result = tk.Message(app.toplevel)
-
-    app.message_result.configure(text=result)
+    app.message_result.configure(text=f"{result}")
 
     app.message_result.grid(column=0, row=9)
 

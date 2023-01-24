@@ -6,6 +6,10 @@ class ConverterGuiApp:
         # build ui
         self.toplevel = tk.Tk() if master is None else tk.Toplevel(master)
 
+        #self.toplevel.configure(background='#32373B')
+
+        self.toplevel.geometry("200x250")
+
         self.toplevel.configure(padx=5, pady=5)
 
         self.toplevel.resizable(False, False)
@@ -65,6 +69,10 @@ class ConverterGuiApp:
         self.label_result.configure(text='Result:')
 
         self.label_result.grid(column=0, row=8)
+
+        self.toplevel.grid_anchor("center")
+
+        self.message_result = tk.Message(self.toplevel)
 
         # Main widget
         self.mainwindow = self.toplevel
