@@ -2,6 +2,9 @@ from converter_gui import ConverterGuiApp
 import tkinter as tk
 
 def to_decimal():
+    """
+        TAKE A NUMBER AND TURN IT TO DECIMAL
+    """
     num = app.entry_num.get()
     sis_entrada = app.combobox_base1.get()
     base_value = 0
@@ -43,6 +46,9 @@ def to_decimal():
     return definitive_value                
 
 def to_binary():
+    """
+        TAKE A NUMBER AND TURN IT TO BINARY
+    """
     num = to_decimal()
     list_1 = []
 
@@ -58,6 +64,9 @@ def to_binary():
     return int(content[::-1])     
 
 def to_octal():
+    """
+        TAKE A NUMBER AND TURN IT TO OCTAL
+    """
     num = to_decimal()
     list_1 = []
 
@@ -71,6 +80,9 @@ def to_octal():
     return content[::-1]
 
 def to_hexa():
+    """
+        TAKE A NUMBER AND TURN IT TO HEXADECIMAL
+    """
     num = to_decimal()
     list_1 = []
 
@@ -98,6 +110,9 @@ def to_hexa():
     return content[::-1]
 
 def definitive_function():
+    """
+        DECIDE WHICH FUNCTION TO USE
+    """
     tipo_saida = app.combobox_base2.get()
     if (tipo_saida == "Decimal"):
         result = to_decimal()
@@ -113,6 +128,7 @@ def definitive_function():
     app.message_result.grid(column=0, row=9)
 
 if __name__ == "__main__":
+    #SETTING A FUNCTION TO THE GUI BUTTON AND RUNNING THE APP
     app = ConverterGuiApp()
     app.button_convert.configure(command=definitive_function)
     app.run()
