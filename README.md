@@ -18,11 +18,6 @@ This application was built using the following technologies:
 - Python
 - Tkinter
 
-## Future Improvements
-Adding support for more base systems such as base 3, base 5, etc.
-Adding an option to convert fractional numbers.
-Adding copy to clipboard functionality for the converted numbers.
-
 ## Contributing
 Contributions are welcome! If you would like to contribute, please create a pull request with your changes.
 
