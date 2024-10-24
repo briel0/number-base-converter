@@ -80,7 +80,7 @@ class ConverterGuiApp:
 
         self.toplevel.grid_anchor("center")
 
-        self.message_result = tk.Message(self.toplevel)
+        self.message_result = tk.Message(self.toplevel, width = 1000)
 
         # MAIN WIDGET
         self.mainwindow = self.toplevel
